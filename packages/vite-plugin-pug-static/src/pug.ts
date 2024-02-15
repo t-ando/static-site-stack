@@ -30,7 +30,8 @@ const reflectAncestorsIntoModuleMap = (
     ancestorModule.importers.add(compiledModule) // ToDo: 依存関係から削除された場合の処理
     importedModules.add(ancestorModule) // Optional
   })
-  compiledModule.importedModules = importedModules // Optional
+  // compiledModule.importedModules = importedModules // Optional
+  compiledModule.clientImportedModules = importedModules // Optional
 }
 
 /**
